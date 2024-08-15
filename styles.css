@@ -519,3 +519,24 @@ a {
     line-height: 1.2;
   }
 }
+
+.intro {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 1920px;
+  grid-gap: clamp(4px, calc(-5.09px + 2.42vw), 24px);
+  -webkit-padding-start: 0px;
+  padding-inline-start: 0px;
+  -webkit-padding-end: 0px;
+  padding-inline-end: 0px;
+  width: 100%;
+  -webkit-margin-start: auto;
+  margin-inline-start: auto;
+  -webkit-margin-end: auto;
+  margin-inline-end: auto;
+  margin-bottom: var(--cam-space-10);
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
