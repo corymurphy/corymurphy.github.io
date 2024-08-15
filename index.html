@@ -1,18 +1,179 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<style>
-  .background-dark {
-    color: rgba(255, 255, 255, 0.64);
-    background: #000;
-    font-size: clamp(14px, calc(14.00px + 0.00vw), 14px);
-  }
-</style>
-<title>Cory Murphy</title>
-</head>
-<body class="background-dark">
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width"/>
+        <meta charSet="utf-8"/>
+        <title>Cory Murphy - SRE</title>
+    </head>
+    <body>
+        <div>
+            <link rel="stylesheet" href="styles.css">
+            <div class="main-content">
+                <style>
+                    .intro {
+                        display: grid;
+                        grid-template-columns: repeat(4, 1fr);
+                        max-width: 1920px;
+                        grid-gap: clamp(4px, calc(-5.09px + 2.42vw), 24px);
+                        -webkit-padding-start: 0px;
+                        padding-inline-start:0px;-webkit-padding-end: 0px;
+                        padding-inline-end:0px;width: 100%;
+                        -webkit-margin-start: auto;
+                        margin-inline-start:auto;-webkit-margin-end: auto;
+                        margin-inline-end:auto;
+                        margin-bottom: var(--cam-space-10);
+                        -webkit-align-items: center;
+                        -webkit-box-align: center;
+                        -ms-flex-align: center;
+                        align-items: center;
+                    }
+                </style>
+                <div class="intro">
+                    <div style="grid-column: span 1/span 1;">
+                        <button type="button">
+                            <img style="border-radius: 9999px;" alt="cory" src="profile.jpeg">
+                        </button>
+                    </div>
+                    <div style="grid-column: span 3/span 3;">
+                      <h1 class="name-header">Cory Murphy</h1>
+                      <p>SRE • Security Software Engineer </p>
+                      <style>
+                          .intro-link {
+                              transition-property: background-color,border-color,color,fill,stroke,opacity,box-shadow,transform;
+                              transition-duration: 150ms;
+                              transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+                              cursor: pointer;
+                              -webkit-text-decoration: none;
+                              text-decoration: none;
+                              outline: 2px solid transparent;
+                              outline-offset: 2px;
+                              color: white;
+                              opacity: 0.5;
+                          }
 
-<h2>🚧under construction 🚧</h2>
+                          .intro-link:hover,.intro-link[data-hover] {
+                              -webkit-text-decoration: underline;
+                              text-decoration: underline;
+                          }
 
-</body>
+                          .intro-link:focus,.intro-link[data-focus] {
+                              box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.6);
+                          }
+                      </style>
+                      <a class="intro-link" href="https://www.corymurphy.io">corymurphy.io</a>
+                    </div>
+                </div>
+                <div style="margin-bottom: 3.5rem;">
+                    <style>
+                        .about-header {
+                            font-family: var(--cam-fonts-heading);
+                            font-weight: 400;
+                            color: var(--cam-colors-white-500);
+                            font-size: var(--cam-fontSizes-md);
+                            line-height: 1.2;
+                            margin-bottom: 0.5rem;
+                        }
+                    </style>
+                    <h2 class="about-header">About</h2>
+                    <p>Hi, I'm a security focused software engineer currently exploring developer experience and site reliability engineering. I'm guided by a pragmatic data driven approach to security and platform design.</p>
+                </div>
+                <div style="margin-bottom: 3.5rem;">
+                    <h2 class="experiences-header-title">Work Experience</h2>
+                    <div class="experience-section">
+                        <div class="timespan-block">
+                            <p style="color: white; opacity: 0.5;">2020 - present</p>
+                        </div>
+                        <div class="experience-content-grid">
+                            <a class="experience-content-title" href="https://www.ezcater.com">
+                                Site Reliability Engineer - ezCater
+                            </a>
+                            <p style="margin-top: 0.5rem;margin-bottom: 0.5rem;">
+                                Building an intuitive developer focused platform offering a seamless local dev to production path while encouraging self ownership and distributed decision making. Using Go, Python and Ruby to scale a modern Kubernetes native microservices system driven by GitOps and SRE principals.
+                            </p>
+                            <p style="color: white; opacity: 0.5;">Go • Python • Kubernetes • AWS</p>
+                        </div>
+                    </div>
+                    <div class="experience-section">
+                        <div class="key-text-grid">
+                            <p style="color: white; opacity: 0.5;">2019 - 2020</p>
+                        </div>
+                        <div class="experience-content-grid">
+                            <a class="experience-content-title" href="https://www.aetna.com">
+                                Software Engineer - Aetna Digital
+                            </a>
+                            <p style="margin-top: 0.5rem;margin-bottom: 0.5rem;">
+                                Designed and developed a platform that ensured all delivered code met security and quality gates through intuitive pull request feedback and automated remediation.
+                            </p>
+                            <p style="color: white; opacity: 0.5;">Python • AWS • ECS • Lambda</p>
+                        </div>
+                    </div>
+                    <div class="experience-section">
+                        <div class="key-text-grid">
+                            <p style="color: white; opacity: 0.5;">2018</p>
+                        </div>
+                        <div class="experience-content-grid">
+                            <a class="experience-content-title" href="https://www.secureauth.com/">
+                                Security Consultant - SecureAuth
+                            </a>
+                            <p style="margin-top: 0.5rem;margin-bottom: 0.5rem;">
+                                Developed custom identity federation integrations (OpenID/SAML) in C# for SecureAuth customer applications.
+                            </p>
+                            <p style="color: white; opacity: 0.5;">C# MVC - Powershell - SAML • OpenID • OAuth</p>
+                        </div>
+                    </div>
+                    <div class="experience-section">
+                        <div class="key-text-grid">
+                            <p style="color: white; opacity: 0.5;">2012 - 2017</p>
+                        </div>
+                        <div class="experience-content-grid">
+                            <a class="experience-content-title" href="https://www.fmglobal.com">
+                                Security Software Engineer - FM Global
+                            </a>
+                            <p style="margin-top: 0.5rem;margin-bottom: 0.5rem;">
+                                Built a PKI automation ASP.NET MVC web app to automate and securely manage certificates for many platforms.
+                                <br/><br/>
+                                Internal pen testing, developed mitigations, and consulted with development teams to improve their security posture. 
+                                <br/><br/>
+                                Automated many processed including infrastructure provisioning, configuration, identity lifecycle management, and security assessments.
+                            </p>
+                            <p style="color: white; opacity: 0.5;">C# MVC • Powershell • Pen Testing • SAML</p>
+                        </div>
+                    </div>
+
+                    <h2 class="experiences-header-title">Links</h2>
+                    <div class="experience-section">
+                        <div class="key-text-grid">
+                            <p style="color: white; opacity: 0.5;">Github</p>
+                        </div>
+                        <div class="experience-content-grid">
+                            <a class="experience-content-title" href="https://github.com/corymurphy/">
+                                @corymurphy
+                            </a>
+                        </div>
+                    </div>
+                    <div class="experience-section">
+                        <div class="key-text-grid">
+                            <p style="color: white; opacity: 0.5;">LinkedIn</p>
+                        </div>
+                        <div class="experience-content-grid">
+                            <a class="experience-content-title" href="https://www.linkedin.com/in/cory-murphy-546b6b34/">
+                                Cory Murphy
+                            </a>
+                        </div>
+                    </div>
+                    <div class="experience-section">
+                      <div class="key-text-grid">
+                          <p style="color: white; opacity: 0.5;">Email</p>
+                      </div>
+                      <div class="experience-content-grid">   
+                          <a class="experience-content-title" href="mailto:h5b4qr34bdp5g7imjgq2@proton.me">
+                            h5b4qr34bdp5g7imjgq2@proton.me
+                          </a>
+                      </div>
+                  </div>
+                </div>
+            </div>
+            <span></span>
+        </div>
+    </body>
 </html>
