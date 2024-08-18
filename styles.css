@@ -377,7 +377,8 @@ a {
   position: fixed;
   top: 0px;
   width: 100%;
-  padding: var(--cam-space-4);
+  /* padding: var(--cam-space-4); */
+  padding-top: var(--cam-space-4);
   -moz-box-align: center;
   align-items: center;
   -moz-box-pack: justify;
@@ -410,13 +411,13 @@ a {
 }
 
 .main-content {
-  padding-top: 115px;
+  padding-top: 80px;
   padding-bottom: 115px;
   -webkit-padding-start: var(--cam-space-4);
   padding-inline-start: var(--cam-space-4);
   -webkit-padding-end: var(--cam-space-4);
   padding-inline-end: var(--cam-space-4);
-  max-width: 500px;
+  max-width: 42em;
   -webkit-margin-start: auto;
   margin-inline-start: auto;
   -webkit-margin-end: auto;
@@ -539,4 +540,37 @@ a {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+/* blog */
+
+ul.posts {
+  list-style-type: none;
+  margin-bottom: 2em;
+}
+
+ul.posts li {
+  line-height: 1.75em;
+}
+
+ul.posts span {
+  color: #aaa;
+  font-family: Monaco, "Courier New", monospace;
+}
+
+ul.posts a {
+  color: var(--cam-colors-white-500);
+}
+
+#post > h1 {
+  margin-bottom: 1em;
+  font-weight: 400;
+  font-size: var(--cam-fontSizes-lg);
+}
+
+#post > .meta {
+  color: var(--cam-colors-whiteAlpha-700);
+  background: var(--cam-colors-black-500);
+  font-size: var(--cam-fontSizes-md);
+  margin-bottom: 1em;
 }
