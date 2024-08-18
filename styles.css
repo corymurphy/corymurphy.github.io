@@ -373,16 +373,17 @@ a {
 }
 
 .nav-bar {
-  display: flex;
-  position: fixed;
   top: 0px;
-  width: 100%;
-  /* padding: var(--cam-space-4); */
+  width: 42em;
   padding-top: var(--cam-space-4);
   -moz-box-align: center;
   align-items: center;
   -moz-box-pack: justify;
   justify-content: space-between;
+  -webkit-margin-start: auto;
+  margin-inline-start: auto;
+  -webkit-margin-end: auto;
+  margin-inline-end: auto;
 }
 
 @media (min-width: 768px) {
@@ -411,7 +412,7 @@ a {
 }
 
 .main-content {
-  padding-top: 80px;
+  padding-top: 60px;
   padding-bottom: 115px;
   -webkit-padding-start: var(--cam-space-4);
   padding-inline-start: var(--cam-space-4);

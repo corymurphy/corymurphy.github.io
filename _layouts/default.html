@@ -9,20 +9,19 @@
 </head>
 
 <body>
+  <header class="nav-bar">
+    <div class="lg:sticky lg:top-20">
+      <nav
+        style="display: flex; flex-direction: row; align-items: flex-start; position: relative; padding-left: 0; padding-right: 0; padding-bottom: 0;">
+        <div style="padding-right: 2.5rem; display: flex; flex-direction: row;">
+          <a class="navbar-links" href="/">home</a>
+          <a class="navbar-links" href="/blog">blog</a>
+        </div>
+      </nav>
+    </div>
+  </header>
   <div class="main-content">
-    <header class="nav-bar">
-      <div class="lg:sticky lg:top-20">
-        <nav
-          style="display: flex; flex-direction: row; align-items: flex-start; position: relative; padding-left: 0; padding-right: 0; padding-bottom: 0;">
-          <div style="padding-right: 2.5rem; display: flex; flex-direction: row;">
-            <a class="navbar-links" href="/">home</a>
-            <a class="navbar-links" href="/blog">blog</a>
-          </div>
-        </nav>
-      </div>
-
-    </header>
-      {{ content }}
+    {{ content }}
     <span></span>
   </div>
 </body>
