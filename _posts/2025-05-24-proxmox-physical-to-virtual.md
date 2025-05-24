@@ -3,56 +3,60 @@ layout: post
 title: proxmox - physical to virtual migration
 ---
 
-{{ page.title }}
-================
+<h1>{{ page.title }}</h1>
 
 <p class="meta">May 24 2025</p>
 
-this guide will describe how to migrate a physical machine to a proxmox virtual machine.
+<p>this guide will describe how to migrate a physical machine to a proxmox virtual machine.</p>
 
-## create disk image of the physical machine
+<h2>create disk image of the physical machine</h2>
 
-1. boot the machine using a linux live cd. I'm using Knoppix 7.2 because it works with the Dual Pentium III machine.
+<ol>
+<li>boot the machine using a linux live cd. I'm using Knoppix 7.2 because it works with the Dual Pentium III machine.</li>
 
-2. find the source disk
+<li>find the source disk</li>
+</ol>
 
-```shell
-lsblk
+<pre><code class="language-shell">lsblk
 
 # assuming the output as follows
 
 # /dev/sda      <-- destination
 # /dev/sdb      <-- source
-```
+</code></pre>
 
-3. mount destination disk (previously formatted as ext3 for knoppix compatibility)
+<ol start="3">
+<li>mount destination disk (previously formatted as ext3 for knoppix compatibility)</li>
+</ol>
 
-```shell
-mkdir -p /mnt/destination
+<pre><code class="language-shell">mkdir -p /mnt/destination
 mount -t ext3 /dev/sda1 /mnt/destination
-```
+</code></pre>
 
-4. create disk image
+<ol start="4">
+<li>create disk image</li>
+</ol>
 
-```shell
-dd if=/dev/sdb of=/mnt/destination/server.img bs=8M conv=noerror,sync
-```
+<pre><code class="language-shell">dd if=/dev/sdb of=/mnt/destination/server.img bs=8M conv=noerror,sync
+</code></pre>
 
-## import image into virtual machine
+<h2>import image into virtual machine</h2>
 
-1. create a new proxmox virtual machine without a disk. note the vmid, i'll use vmid 109 as an example.
+<ol>
+<li>create a new proxmox virtual machine without a disk. note the vmid, i'll use vmid 109 as an example.</li>
 
-2. on the proxmox instance, mount the destination disk.
+<li>on the proxmox instance, mount the destination disk.</li>
 
-3. convert disk image to qcow2
+<li>convert disk image to qcow2</li>
+</ol>
 
-```shell
-qemu-img convert -f raw -O qcow2 server.img server.qcow2
-```
+<pre><code class="language-shell">qemu-img convert -f raw -O qcow2 server.img server.qcow2
+</code></pre>
 
-4. import disk into virtual machine
+<ol start="4">
+<li>import disk into virtual machine</li>
+</ol>
 
-```shell
-# vm-storage is an example, this would be the storage volume that you store proxmox vm disks.
+<pre><code class="language-shell"># vm-storage is an example, this would be the storage volume that you store proxmox vm disks.
 qm disk import 109 server.qcow2 vm-storage
-```
+</code></pre>
